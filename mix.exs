@@ -43,6 +43,7 @@ defmodule EzSlots.Mixfile do
       {:cowboy, "~> 1.0"},
       {:erlng, github: "timCF/erlng"},
       {:maybe, github: "timCF/maybe"},
+      {:distillery, "~> 1.0.0"},
     ]
   end
 
