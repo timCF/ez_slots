@@ -2,7 +2,7 @@ defmodule EzSlotsWeb.PageController do
   use EzSlotsWeb, :controller
 
   def index(conn, _params) do
-    render conn, "index.html"
+    redirect conn, to: "/wheel.html"
   end
 
   @fun_currency %{
@@ -27,7 +27,7 @@ defmodule EzSlotsWeb.PageController do
       user: %{
         balance: "100500",
         socketSessionId: "foo",
-        username: "bar",
+        username: "user",
       }
     }
     json(conn, response)

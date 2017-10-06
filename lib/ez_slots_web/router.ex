@@ -15,6 +15,7 @@ defmodule EzSlotsWeb.Router do
 
   scope "/", EzSlotsWeb do
     pipe_through :api
+
     scope "/" do
       pipe_through :browser # Use the default browser stack
       get "/", PageController, :index
@@ -22,6 +23,13 @@ defmodule EzSlotsWeb.Router do
 
     get "/init", PageController, :init
     get "/chat/load/:lang", PageController, :chat
+
+    scope "/game" do
+      scope "/wheel" do
+        post "/spin", WheelController, :spin
+      end
+    end
+
   end
 
   # Other scopes may use custom stacks.
