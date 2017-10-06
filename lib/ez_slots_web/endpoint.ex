@@ -9,7 +9,7 @@ defmodule EzSlotsWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/", from: :ez_slots, gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt wheel.html assets)
+    only: ~w(css fonts images js favicon.ico favicon.png robots.txt wheel.html assets)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
