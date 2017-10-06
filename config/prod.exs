@@ -19,6 +19,14 @@ config :ez_slots, EzSlotsWeb.Endpoint,
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
+# Configure your database
+config :ez_slots, EzSlots.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "ez_slots_prod",
+  pool_size: 15
+
 # Do not print debug messages in production
 config :logger, level: :info
 
